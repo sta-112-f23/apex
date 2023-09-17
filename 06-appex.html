@@ -98,19 +98,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="part-1" class="level2">
 <h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
-<p>Open your <code>04-appex.qmd</code> file. Load the packages by running the top R chunk of code.</p>
 <ol type="1">
-<li>Create a visual summary using the <code>starwars</code> data of the relationship between <code>mass</code> and <code>height</code>. What do you notice?</li>
-<li>Fit a linear model on the <code>starwars</code> data set predicting a characters <code>mass</code> using their <code>height</code>.</li>
-<li>Create a new data set called <code>starwars_nojabba</code> where you drop “Jabba Desilijic Tiure” from the data. You can edit the code below to do this.</li>
+<li>Go to <a href="https://lucy.shinyapps.io/least-squares/">lucy.shinyapps.io/least-squares/</a></li>
+<li>This shows a scatter plot of 10 data points with a line estimating the relationship between <code>x</code> and <code>y</code>. Drag the blue points to change the line.</li>
+<li>See if you can find a line that minimizes the sum of square errors</li>
 </ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>starwars_nojabba <span class="ot">&lt;-</span> starwars <span class="sc">%&gt;%</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"----"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="4" type="1">
-<li>Recreate the plot from 1 on <code>starwars_nojabba</code></li>
-<li>Refit the linear model from 2 on this reduced data set. How do the coefficients compare? Which is a better representation of the average character?</li>
+</section>
+<section id="part-2" class="level2">
+<h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
+<ol type="1">
+<li>Create a new project from this template in RStudio Pro:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">https://github.com/sta-112-f23/appex-06.git</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Load the packages and data by running the top chunk of R code</li>
+<li>Learn about the <code>PorschePrice</code> data by running <code>?PorschePrice</code> in your Console</li>
+<li>Fit a linear model predicting <code>Price</code> from <code>Mileage</code></li>
+<li>Add a variable called <code>y_hat</code> to the <code>PorschePrice</code> dataset with the predicted y values</li>
+<li>Add a variable called <code>residual</code> to the <code>PorschePrice</code> dataset with the residuals</li>
 </ol>
 <div class="quarto-figure quarto-figure-right">
 <figure class="figure">
